@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oliver Yair Tolentino Hernández · Desarrollador de Software</title>
+<meta name="description" content="Portafolio de Oliver Yair Tolentino Hernández: desarrollo web, Python, Django y Machine Learning.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f8f8;--surface:#fff;--ink:#16262b;--mute:#586b71;--line:#cfdadc;--teal:#0e7c86;--teal-soft:#dff0f1;--on-teal:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1a1d;--surface:#16262b;--ink:#e6f0f1;--mute:#93a9ae;--line:#2a3f45;--teal:#3fc1cc;--teal-soft:#14383d;--on-teal:#0f1a1d}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.65 "IBM Plex Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","IBM Plex Sans",sans-serif;line-height:1.1;margin:0}
+a{color:var(--teal)}a:focus-visible,button:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:1.25rem;align-items:center;justify-content:space-between;padding-block:.7rem}
+nav b{font-family:"Bricolage Grotesque",sans-serif;font-size:1.05rem}
+nav ul{display:flex;gap:1.1rem;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav ul a{color:var(--mute);text-decoration:none;font-size:.92rem}nav ul a:hover{color:var(--teal)}
+.hero{padding:5rem 0 3.5rem}
+.hero h1{font-size:clamp(2.6rem,8vw,5.6rem);font-weight:800;letter-spacing:-.03em;max-width:12ch}
+.hero .role{font-size:1.25rem;color:var(--teal);font-weight:600;margin:1.2rem 0 .6rem}
+.hero p{max-width:40rem;color:var(--mute);font-size:1.08rem;margin:0 0 1.8rem}
+.btns{display:flex;gap:.7rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.7rem 1.2rem;border-radius:.5rem;font-weight:600;text-decoration:none;border:2px solid var(--teal);color:var(--teal)}
+.btn.main{background:var(--teal);color:var(--on-teal)}.btn:hover{filter:brightness(1.1)}
+.stats{display:flex;gap:2.2rem;flex-wrap:wrap;margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--line)}
+.stats div{font-size:.9rem;color:var(--mute)}.stats strong{display:block;font:700 1.6rem "Bricolage Grotesque",sans-serif;color:var(--ink)}
+section{padding:3.5rem 0;border-top:1px solid var(--line)}
+section>.wrap>h2{font-size:clamp(1.7rem,4vw,2.3rem);margin-bottom:1.6rem;padding-left:1.1rem;border-left:4px solid var(--teal)}
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:2.5rem}
+@media(max-width:760px){.about{grid-template-columns:1fr}}
+.about p{margin:0 0 1rem}
+.facts{list-style:none;margin:0;padding:1.2rem 1.3rem;background:var(--surface);border:1px solid var(--line);border-radius:.7rem}
+.facts li{padding:.45rem 0;border-bottom:1px solid var(--line);font-size:.95rem}.facts li:last-child{border:0}
+.facts span{display:block;font-size:.8rem;color:var(--mute)}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem}
+.skills div{background:var(--surface);border:1px solid var(--line);border-radius:.7rem;padding:1.1rem 1.2rem}
+.skills h3{font-size:1.05rem;margin-bottom:.7rem}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;margin:0;padding:0;list-style:none}
+.chips li{background:var(--teal-soft);color:var(--ink);border-radius:2rem;padding:.2rem .75rem;font-size:.85rem;font-weight:500}
+.proj{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-bottom:3.5rem;align-items:start}
+.proj:nth-child(even) .shots{order:2}
+@media(max-width:800px){.proj{grid-template-columns:1fr}.proj:nth-child(even) .shots{order:0}}
+.proj h3{font-size:1.6rem;margin-bottom:.3rem}.proj .tag{color:var(--mute);font-size:.9rem;margin:0 0 .9rem}
+.proj h4{margin:1.1rem 0 .35rem;font-size:.98rem}
+.proj ul.det{margin:0;padding-left:1.1rem;color:var(--mute)}.proj ul.det li{margin-bottom:.3rem}
+.proj .chips{margin-top:1rem}.proj .btns{margin-top:1.1rem}
+.win{background:var(--surface);border:1px solid var(--line);border-radius:.7rem;overflow:hidden}
+.win .bar{display:flex;gap:.35rem;padding:.55rem .8rem;border-bottom:1px solid var(--line)}
+.win .bar i{width:.6rem;height:.6rem;border-radius:50%;background:var(--line)}
+.win button{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in}
+.win img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover}
+.ph{aspect-ratio:16/10;display:grid;place-items:center;text-align:center;padding:1rem;color:var(--mute);font-size:.85rem;background:repeating-linear-gradient(135deg,var(--teal-soft),var(--teal-soft) 12px,transparent 12px,transparent 24px)}
+.thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;margin-top:.6rem}
+.thumbs .win img,.thumbs .ph{aspect-ratio:16/10}.thumbs .ph{font-size:.7rem;padding:.3rem}
+.tl{list-style:none;margin:0;padding:0 0 0 1.6rem;border-left:2px solid var(--line)}
+.tl li{position:relative;margin-bottom:2rem}
+.tl li::before{content:"";position:absolute;left:-2.15rem;top:.45rem;width:.75rem;height:.75rem;border-radius:50%;background:var(--teal)}
+.tl time{font-size:.85rem;color:var(--mute)}.tl h3{font-size:1.25rem;margin:.15rem 0}.tl p{margin:.3rem 0;color:var(--mute)}
+.contact p{max-width:36rem;color:var(--mute)}
+footer{padding:2rem 0;border-top:1px solid var(--line);color:var(--mute);font-size:.88rem}
+dialog{border:0;padding:0;background:none;max-width:min(92vw,70rem)}dialog::backdrop{background:rgba(0,0,0,.8)}
+dialog img{max-width:100%;max-height:88vh;border-radius:.5rem;display:block}
+dialog button{position:absolute;top:.5rem;right:.5rem;font-size:1.3rem;border:0;border-radius:50%;width:2.4rem;height:2.4rem;cursor:pointer}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><b>OT</b>
+<ul><li><a href="#sobre-mi">Sobre mí</a></li><li><a href="#habilidades">Habilidades</a></li><li><a href="#proyectos">Proyectos</a></li><li><a href="#experiencia">Experiencia</a></li><li><a href="#contacto">Contacto</a></li></ul></div></nav>
+
+<header class="hero"><div class="wrap">
+<h1>Oliver Yair Tolentino Hernández</h1>
+<p class="role">Desarrollador de software · Web y Machine Learning</p>
+<p>Estudio Ingeniería en Desarrollo y Gestión de Software y construyo soluciones web y de análisis de datos: desde una tienda en línea con Django hasta redes neuronales que predicen retrasos de vuelos.</p>
+<div class="btns"><a class="btn main" href="#proyectos">Ver proyectos</a><a class="btn" href="cv/CV_Oliver_Yair_Tolentino.docx" download>Descargar CV</a><a class="btn" id="gh" href="#contacto">GitHub</a></div>
+<div class="stats"><div><strong>+7 millones</strong>de registros procesados</div><div><strong>6, 3 de ellos destacados</strong>proyectos y prácticas durante la carrera</div><div><strong>2025</strong>TSU en Desarrollo de Software Multiplataforma</div></div>
+</div></header>
+
+<section id="sobre-mi"><div class="wrap"><h2>Sobre mí</h2>
+<div class="about"><div>
+<p>Soy estudiante de la Universidad Tecnológica de Tecámac, en Ingeniería en Desarrollo y Gestión de Software, con interés en el desarrollo web y la creación de soluciones tecnológicas automatizadas.</p>
+<p>Tengo conocimientos en Java, C#, JavaScript, PHP y Python, y experiencia académica con frameworks, bases de datos y herramientas de desarrollo. Hice mi primera estadía profesional en Tec Gurus, donde probé aplicaciones frontend y me capacité en Angular y Spring Boot.</p>
+<p>Soy responsable, comprometido y con ganas de aprender. Busco participar en proyectos donde pueda aportar lo que sé y seguir creciendo en tecnología.</p></div>
+<ul class="facts"><li><span>Ubicación</span>México</li><li><span>Estudios</span>TSU en Desarrollo de Software Multiplataforma</li><li><span>Idioma</span>Español (nativo)</li><li><span>Disponibilidad</span>Prácticas, becas y primer empleo</li></ul></div></div></section>
+
+<section id="habilidades"><div class="wrap"><h2>Habilidades</h2>
+<div class="skills">
+<div><h3>Lenguajes</h3><ul class="chips"><li>Python</li><li>Java</li><li>C#</li><li>JavaScript</li><li>PHP</li><li>SQL</li></ul></div>
+<div><h3>Frameworks y web</h3><ul class="chips"><li>Django</li><li>Angular</li><li>Spring Boot</li><li>HTML</li><li>CSS</li></ul></div>
+<div><h3>Datos y Machine Learning</h3><ul class="chips"><li>Redes neuronales</li><li>Pentaho (PDI)</li><li>Power BI</li><li>Bases de datos SQL</li></ul></div>
+<div><h3>Herramientas</h3><ul class="chips"><li>Git</li><li>GitHub</li><li>Cypress (E2E)</li></ul></div>
+<div><h3>Habilidades blandas</h3><ul class="chips"><li>Resolución de problemas</li><li>Trabajo en equipo</li><li>Aprendizaje rápido</li></ul></div>
+</div></div></section>
+
+<section id="proyectos"><div class="wrap"><h2>Proyectos</h2><div id="projects"></div></div></section>
+
+<section id="experiencia"><div class="wrap"><h2>Experiencia y estudios</h2>
+<ol class="tl">
+<li><time>05.2025 – 09.2025</time><h3>Practicante de Desarrollo de Software</h3><p>Tec Gurus · Ciudad de México</p><p>Pruebas de frontend con Cypress en entornos E2E y capacitación en Angular y Spring Boot para participar en procesos de migración de entornos.</p></li>
+<li><time>09.2023 – 09.2025</time><h3>TSU en Desarrollo de Software Multiplataforma</h3><p>Universidad Tecnológica de Tecámac · Departamento de Tecnologías de la Información</p></li>
+<li><time>09.2020 – 08.2023</time><h3>Técnico en Programación, Tecnologías de la Información</h3><p>CECyTEM Plantel Ecatepec I – Tierra Blanca</p></li>
+</ol></div></section>
+
+<section id="contacto" class="contact"><div class="wrap"><h2>Contacto</h2>
+<p>¿Tienes una vacante, un proyecto o quieres revisar mi código? Escríbeme y te respondo pronto.</p>
+<div class="btns"><a class="btn main" href="mailto:oliguitarstyles@gmail.com">oliguitarstyles@gmail.com</a><a class="btn" id="gh2" href="#contacto">Perfil de GitHub</a></div>
+</div></section>
+<footer><div class="wrap">© <span id="y"></span> Oliver Yair Tolentino Hernández</div></footer>
+<dialog id="lb"><button aria-label="Cerrar">×</button><img alt=""></dialog>
+
+<script>
+// ====== EDITA AQUÍ ======
+const LINKS={github:"https://github.com/Oliver200504"}; // ej. github:"https://github.com/tu-usuario"
+const PROJECTS=[
+{title:"Predicción de retrasos de vuelos con Machine Learning",tag:"Proyecto académico · Datos y redes neuronales",
+ summary:"Solución completa de análisis y predicción de retrasos para vuelos locales en distintos aeropuertos de Estados Unidos, integrando limpieza de datos, visualización y modelos de redes neuronales.",
+ role:"Participé en todas las etapas del flujo, de los datos crudos a las predicciones.",
+ steps:["Preparación y limpieza de más de 7 millones de registros con Pentaho Data Integration (PDI).","Análisis y visualización en Power BI con dashboards e indicadores para interpretar los datos con facilidad.","Desarrollo y entrenamiento de redes neuronales para predecir retrasos a partir de los datos procesados.","Integración de las etapas en un solo proceso de análisis y predicción."],
+ stack:["Python","Redes neuronales","Pentaho (PDI)","Power BI","SQL"],
+ shots:["assets/ml-1.png","assets/ml-2.png","assets/ml-3.png"],repo:"",demo:""},
+{title:"Tienda en línea con Python y Django",tag:"Proyecto académico · Desarrollo web",
+ summary:"Plataforma de comercio electrónico con estructura modular para gestionar usuarios, productos, carrito de compras y pedidos.",
+ role:"Desarrollé la aplicación y la base de datos, con control de versiones en Git y GitHub.",
+ steps:["Módulos separados: usuarios, productos, carrito y pedidos.","Plantillas HTML con estilos CSS y comportamiento en JavaScript.","Diseño y consulta de la base de datos del catálogo y los pedidos.","Trabajo con ramas y commits en GitHub."],
+ stack:["Python","Django","HTML","CSS","JavaScript","SQL","Git"],
+ shots:["assets/tienda-1.png","assets/tienda-2.png","assets/tienda-3.png","assets/tienda-4.png","assets/tienda-5.png","assets/tienda-6.png"],repo:"",demo:""},
+{title:"Pruebas E2E de frontend con Cypress",tag:"Estadía profesional · Tec Gurus",
+ summary:"Automatización de pruebas de extremo a extremo del frontend durante mi estadía, y capacitación para participar en migraciones de entornos.",
+ role:"Practicante de desarrollo de software (05.2025 – 09.2025).",
+ steps:["Pruebas automatizadas de frontend con Cypress en entornos E2E.","Capacitación en Angular y Spring Boot.","Participación en procesos de migración de entornos."],
+ stack:["Cypress","Angular","Spring Boot","JavaScript"],
+ shots:["assets/cypress-1.png","assets/cypress-2.png"],repo:"",demo:""}
+];
+// ========================
+const $=s=>document.querySelector(s);
+const lb=$("#lb"),lbImg=lb.querySelector("img");
+function shot(src,alt,big){const w=document.createElement("div");w.className="win";
+ if(big)w.innerHTML='<div class="bar"><i></i><i></i><i></i></div>';
+ const b=document.createElement("button");b.type="button";b.setAttribute("aria-label","Ampliar: "+alt);
+ const img=new Image();img.src=src;img.alt=alt;img.loading="lazy";
+ img.onload=()=>{b.onclick=()=>{lbImg.src=src;lbImg.alt=alt;lb.showModal()}};
+ img.onerror=()=>{b.replaceWith(Object.assign(document.createElement("div"),{className:"ph",textContent:"Agrega tu captura en "+src}))};
+ b.append(img);w.append(b);return w}
+PROJECTS.forEach(p=>{
+ const el=document.createElement("article");el.className="proj";
+ const s=document.createElement("div");s.className="shots";
+ s.append(shot(p.shots[0],"Captura de "+p.title,true));
+ const t=document.createElement("div");t.className="thumbs";
+ p.shots.slice(1).forEach((x,i)=>t.append(shot(x,"Captura "+(i+2)+" de "+p.title)));
+ s.append(t);
+ const links=[p.repo&&`<a class="btn main" href="${p.repo}" target="_blank" rel="noopener">Ver código</a>`,p.demo&&`<a class="btn" href="${p.demo}" target="_blank" rel="noopener">Ver demo</a>`].filter(Boolean).join("");
+ const d=document.createElement("div");
+ d.innerHTML=`<h3>${p.title}</h3><p class="tag">${p.tag}</p><p>${p.summary}</p><h4>Mi aporte</h4><p style="margin:0;color:var(--mute)">${p.role}</p><h4>Qué hice</h4><ul class="det">${p.steps.map(x=>`<li>${x}</li>`).join("")}</ul><ul class="chips">${p.stack.map(x=>`<li>${x}</li>`).join("")}</ul>${links?`<div class="btns">${links}</div>`:""}`;
+ el.append(s,d);$("#projects").append(el)});
+[["gh",LINKS.github],["gh2",LINKS.github]].forEach(([id,u])=>{const a=$("#"+id);if(u){a.href=u;a.target="_blank";a.rel="noopener";a.hidden=false}else if(id!=="li"){a.hidden=true}});
+lb.querySelector("button").onclick=()=>lb.close();lb.onclick=e=>{if(e.target===lb)lb.close()};
+$("#y").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
